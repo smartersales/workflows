@@ -56,7 +56,7 @@ jobs:
             {
             "patterns": [".+.yaml"],
             "files": ["Chart.yaml","config-map-dev.yaml","config-map-pro.yaml"],
-            "depth": 2
+            "depth": 3
             }
 
       - name: Publish chart
