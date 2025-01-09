@@ -55,8 +55,8 @@ jobs:
           search_input: |
             {
             "patterns": [".+.yaml"],
-            "files": ["Chart.yaml"],
-            "depth": 1
+            "files": ["Chart.yaml","config-map-dev.yaml","config-map-pro.yaml"],
+            "depth": 2
             }
 
       - name: Publish chart
