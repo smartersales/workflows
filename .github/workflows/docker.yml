@@ -39,6 +39,8 @@ on:
         required: true
       TOKEN:
         required: true
+      SENTRY_AUTH:
+        required: false
 
 jobs:
   variables:
@@ -98,6 +100,8 @@ jobs:
             ${{ needs.variables.outputs.IMAGE }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
+          build-args: |
+            "SENTRY_AUTH=${{ secrets.SENTRY_AUTH }}"
 
       - name: Move cache
         run: |
