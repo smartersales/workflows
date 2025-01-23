@@ -36,7 +36,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          repository: unplgd-v/${{ inputs.APP_NAME }}
+          repository: smartersales/${{ inputs.APP_NAME }}
           fetch-depth: 0
           token: ${{ secrets.TOKEN }}
           ref: ${{ github.ref_name }}
